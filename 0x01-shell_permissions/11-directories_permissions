@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Get the current directory
+current_directory=$(pwd)
+
+# Loop over all subdirectories of the current directory
+for subdirectory in "$current_directory"/*; do
+
+  # Check if the subdirectory is a directory
+  if [ -d "$subdirectory" ]; then
+
+    # Add execute permission to the subdirectory for the owner, the group owner and all other users
+    chmod g+x "$subdirectory"
+    chmod o+x "$subdirectory"
+  fi
+done

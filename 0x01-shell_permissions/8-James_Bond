@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod `echo -n 666 | tr -d ','` hello
+chmod 711 hello

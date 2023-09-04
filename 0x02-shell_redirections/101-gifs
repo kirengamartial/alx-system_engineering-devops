@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -iname "*.gif" -exec sh -c 'for file do echo "${file%.*}"; done' sh {} +
+find . -type f -name "*.gif" | sed 's/\.gif$//' | sort -f
